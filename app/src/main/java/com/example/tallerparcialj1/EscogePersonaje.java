@@ -9,11 +9,13 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.tallerparcialj1.model.Jugador;
+import com.example.tallerparcialj1.model.Vida;
 import com.google.gson.Gson;
 
 public class EscogePersonaje extends AppCompatActivity implements View.OnClickListener{
 
     private ImageView mugman, cuphead;
+
     String personaje;
 
     //TCP
@@ -28,8 +30,6 @@ public class EscogePersonaje extends AppCompatActivity implements View.OnClickLi
         cuphead=findViewById(R.id.cuphead);
 
         tcp= TCPSingleton.getInstance();
-
-
         mugman.setOnClickListener(this);
         cuphead.setOnClickListener(this);
     }
@@ -52,9 +52,10 @@ public class EscogePersonaje extends AppCompatActivity implements View.OnClickLi
         //creamos el gson
         Gson gson= new Gson();
 
-        //Lo pasomos a json
+        //Creamos al jugador y lo pasamos a JSON
         Jugador jugador= new Jugador(personaje);
         String json= gson.toJson(jugador);
+       
 
         //Enviamos el json
         tcp.enviar(json);

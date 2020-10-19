@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
 
-    private TextView bJugar;
+    private TextView bContinuar;
 
     TCPSingleton tcp;
 
@@ -18,16 +18,16 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bJugar=findViewById(R.id.bJugar);
+        bContinuar=findViewById(R.id.continuar);
 
         tcp=TCPSingleton.getInstance();
 
-        bJugar.setOnClickListener(this);
+        bContinuar.setOnClickListener(this);
 
     }
 
     public void onClick(View view){
-        Intent i = new Intent(this,EscogePersonaje.class);
+        Intent i = new Intent(this,PantallaIntro.class);
         startActivity(i);
 
     }

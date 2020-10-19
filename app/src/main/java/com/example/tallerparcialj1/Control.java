@@ -22,7 +22,7 @@ public class Control extends AppCompatActivity implements OnMessageListener, Vie
     //Booleano que controla el onTouch
     boolean buttonPressed;
 
-    int x;
+    int x,y;
     int xd,yd,vel;
 
     @Override
@@ -33,9 +33,10 @@ public class Control extends AppCompatActivity implements OnMessageListener, Vie
         bDerecha=findViewById(R.id.bDerecha);
         bIzquierda=findViewById(R.id.bIzquierda);
         bDisparo=findViewById(R.id.bDisparo);
-        //x jugador
+        //x y y del jugador
         x=400;
-        //posiciones y vel disparo
+        y=400;
+        //posiciones y vel del disparo
         xd=420;
         yd=400;
         vel=5;
@@ -88,7 +89,7 @@ public class Control extends AppCompatActivity implements OnMessageListener, Vie
                             Gson gson= new Gson();
 
                             //Lo pasamos a Gson
-                            Posicion posicion= new Posicion(x);
+                            Posicion posicion= new Posicion(x,y);
                             String json=gson.toJson(posicion);
 
                             //Se envia la coordenada
