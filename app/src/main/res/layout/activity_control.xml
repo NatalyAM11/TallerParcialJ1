@@ -6,48 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".Control">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/mesa_de_trabajo_1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/shot"
+        android:layout_width="45dp"
+        android:layout_height="250dp"
+        android:background="@drawable/disparo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.197"
+        tools:layout_editor_absoluteX="222dp" />
 
-        <ImageView
-            android:id="@+id/bDisparo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="58dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bIzquierda"
-            app:srcCompat="@drawable/bdisparo" />
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="66dp"
+        android:layout_height="100dp"
+        android:background="@drawable/derecha"
+        tools:layout_editor_absoluteX="186dp"
+        tools:layout_editor_absoluteY="396dp" />
 
-        <ImageButton
-            android:id="@+id/bIzquierda"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.226"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/bizquierdo" />
-
-        <ImageButton
-            android:id="@+id/bDerecha"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="100dp"
-            app:layout_constraintStart_toEndOf="@+id/bIzquierda"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/bderecho" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="68dp"
+        android:layout_height="101dp"
+        android:background="@drawable/izquierda"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="566dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

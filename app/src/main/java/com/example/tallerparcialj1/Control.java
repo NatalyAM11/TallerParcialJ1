@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.tallerparcialj1.model.Disparo;
@@ -14,7 +15,7 @@ import com.google.gson.Gson;
 
 public class Control extends AppCompatActivity implements OnMessageListener, View.OnTouchListener, View.OnClickListener {
 
-    private ImageView bDerecha, bIzquierda, bDisparo;
+    private Button bDerecha, bIzquierda, bDisparo;
 
     //TCP
     TCPSingleton tcp;
@@ -30,9 +31,9 @@ public class Control extends AppCompatActivity implements OnMessageListener, Vie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control);
 
-        bDerecha=findViewById(R.id.bDerecha);
-        bIzquierda=findViewById(R.id.bIzquierda);
-        bDisparo=findViewById(R.id.bDisparo);
+        bDerecha=findViewById(R.id.rightButton);
+        bIzquierda=findViewById(R.id.leftButton);
+            bDisparo=findViewById(R.id.shot);
         //x y y del jugador
         x=400;
         y=400;
@@ -73,12 +74,12 @@ public class Control extends AppCompatActivity implements OnMessageListener, Vie
                         while (buttonPressed){
 
                             switch (view.getId()){
-                                case R.id.bDerecha:
+                                case R.id.rightButton:
                                     x= x+8;
                                     xd= xd+8;
                                     break;
 
-                                case R.id.bIzquierda:
+                                case R.id.leftButton:
 
                                     x= x-8;
                                     xd=xd-8;
