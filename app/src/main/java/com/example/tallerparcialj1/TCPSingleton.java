@@ -49,7 +49,7 @@ public class TCPSingleton extends Thread {
 
         try {
             Log.e(">>","Esperando conexion");
-            Socket socket= new Socket("192.168.0.7",5000);
+            Socket socket= new Socket("192.168.0.6",5000);
             Log.e(">>","Conectado");
 
 
