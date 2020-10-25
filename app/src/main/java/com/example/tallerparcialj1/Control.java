@@ -36,7 +36,7 @@ public class Control extends AppCompatActivity implements OnMessageListener, Vie
             bDisparo=findViewById(R.id.shot);
         //x y y del jugador
         x=400;
-        y=400;
+        y=380;
         //posiciones y vel del disparo
         xd=420;
         yd=400;
