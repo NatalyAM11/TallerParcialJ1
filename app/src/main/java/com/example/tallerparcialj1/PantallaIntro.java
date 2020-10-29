@@ -34,17 +34,17 @@ public class PantallaIntro extends AppCompatActivity implements View.OnClickList
         Intent i = new Intent(this,EscogePersonaje.class);
         startActivity(i);
 
-        //creamos el gson
+       /* //creamos el gson
         Gson gson= new Gson();
 
         //Creo las vidas de los jugadores
-        Vida vida= new Vida(50);
+        Vida vida= new Vida(1);
         String json=gson.toJson(vida);
 
         //Enviamos el json
         tcp.enviar(json);
 
-        Log.e(">>",json);
+        Log.e(">>",json);*/
 
 
     }

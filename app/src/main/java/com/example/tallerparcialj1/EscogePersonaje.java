@@ -17,6 +17,7 @@ public class EscogePersonaje extends AppCompatActivity implements View.OnClickLi
     private ImageView mugman, cuphead;
 
     String personaje;
+    int vidas;
 
     //TCP
     TCPSingleton tcp;
@@ -28,6 +29,8 @@ public class EscogePersonaje extends AppCompatActivity implements View.OnClickLi
 
         mugman=findViewById(R.id.mugman);
         cuphead=findViewById(R.id.cuphead);
+
+        vidas=3;
 
         tcp= TCPSingleton.getInstance();
         mugman.setOnClickListener(this);
@@ -53,7 +56,7 @@ public class EscogePersonaje extends AppCompatActivity implements View.OnClickLi
         Gson gson= new Gson();
 
         //Creamos al jugador y lo pasamos a JSON
-        Jugador jugador= new Jugador(personaje);
+        Jugador jugador= new Jugador(personaje,vidas);
         String json= gson.toJson(jugador);
        
 
