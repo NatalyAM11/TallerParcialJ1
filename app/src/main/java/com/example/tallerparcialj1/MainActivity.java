@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     }
 
     public void onClick(View view){
-        Intent i = new Intent(this,PantallaIntro.class);
+        Intent i = new Intent(this,EscogePersonaje.class);
         startActivity(i);
 
     }
