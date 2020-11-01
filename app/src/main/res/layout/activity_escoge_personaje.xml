@@ -18,19 +18,21 @@
             android:id="@+id/imageView3"
             android:layout_width="485dp"
             android:layout_height="859dp"
-            app:srcCompat="@drawable/fondo"
-            tools:layout_editor_absoluteX="-16dp"
-            tools:layout_editor_absoluteY="-33dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/fondo" />
 
         <ImageView
             android:id="@+id/cuphead"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_marginTop="104dp"
+            android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
             app:srcCompat="@drawable/cuphead"
             tools:srcCompat="@drawable/cuphead" />
 
@@ -44,6 +46,17 @@
             app:layout_constraintTop_toBottomOf="@+id/cuphead"
             app:srcCompat="@drawable/mugman"
             tools:srcCompat="@drawable/mugman" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="280dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/texto" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
